@@ -1,0 +1,62 @@
+<?php 
+if(isset($_POST['firstname'])){
+session_start();
+///initializing variables
+
+$email = $lastname = $firstname = $contact = $institute = $profession = $year = $branch = "";
+
+
+$errors = array();
+
+//connect to db
+
+ //require("config.php");
+$db = mysqli_connect('localhost','u166034215_arya','asdf@1234','u166034215_users') or die("could not connect to database");
+
+//Register user
+
+
+
+$firstname = mysqli_real_escape_string($db,$_POST['firstname']);
+$lastname = mysqli_real_escape_string($db,$_POST['lastname']);
+$email = mysqli_real_escape_string($db,$_POST['email']);
+$contact = mysqli_real_escape_string($db,$_POST['contact']);
+$profession = mysqli_real_escape_string($db,$_POST['profession']);
+$institute = mysqli_real_escape_string($db,$_POST['institute']);
+$year = mysqli_real_escape_string($db,$_POST['year']);
+$branch = mysqli_real_escape_string($db,$_POST['branch']);
+$letter = mysqli_real_escape_string($db,$_POST['letter']);
+
+
+
+
+ 
+// check db for existing user for same email
+
+$user_check_query = "SELECT * FROM userdata2 WHERE email = '$email' LIMIT 1";
+
+$results = mysqli_query($db, $user_check_query);
+$userdata2 = mysqli_fetch_assoc($results);
+
+if($userdata2) {
+
+	if($userdata2['email'] === $email){array_push($errors,"Email already registered");}
+
+}
+
+
+// //Register the user if no error
+//echo "errors ". count($errors) . " -- " . $errors;
+if(count($errors)==0){
+	//echo "we are inside insertion code<br>";
+	$query = "INSERT INTO userdata2 (firstname,lastname,email,contact,profession,institute,`year`,branch,letter) VALUES ('$firstname','$lastname','$email','$contact','$profession','$institute','$year','$branch','$letter')";
+
+	mysqli_query($db,$query);
+
+	$_SESSION['firstname'] = $firstname;
+	$_SESSION['success'] = " Thanks for registering";
+
+	header("location: index.php");
+}
+}
+?>

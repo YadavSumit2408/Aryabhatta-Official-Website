@@ -1,0 +1,393 @@
+body{
+    background: #f4ebdb!important;
+    min-width: 841px;
+}
+.text-1{
+font-family: 'Playfair Display',serif!important;}
+button{
+outline: 0!important;}
+.navbar {
+    /* position: absolute; */
+    height: 4rem;
+    background-color: #2c4a52;
+    color: aliceblue;}
+.brand-logo{
+    font-size: 20px;
+    margin-left: 1rem;
+    color: aliceblue;
+}
+.navbar-nav{
+    margin-left: 1.5rem;}
+.navbar-light .navbar-nav >.nav-link,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show>.nav-link {
+        color: white!important;}
+.navbar #regi{
+    text-decoration: none;
+    color:white;}
+.navbar #regi button{
+    height:35px;
+    width:125px;
+    letter-spacing: 2.5px;
+    border-radius: 25px;
+    margin-top:-5px;
+    margin-right:20px;
+    border:2px solid white;
+    color:white;
+    background-color: #23374d;}
+.navbar #regi button:hover{
+    background-color:whitesmoke;
+    color:black;box-shadow: 10px 10px 15px black;
+transition: 1s}
+.navbar .brand-logo{
+    font-size: 20px;
+    margin-left: 1rem;
+    color: aliceblue;}
+.modal-backdrop{position: inherit!important;}
+/* ================================NAVBAR CSS ENDS================================================== */
+.header-container {
+    position: relative;
+    
+    background: linear-gradient(to right,#537072ad, rgba(255, 255, 255, 0)), url("header-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    z-index: -1;}
+.header-container .header{
+
+    /* background-color: #23374d; */
+    /* width: 100%; */
+    height: 23rem;
+    margin-left: 2rem;
+    text-align: left;}
+.content-above{
+    padding-top: 6rem;
+    width: 7rem;
+    position: relative;
+    font-size: 3rem;
+    border-bottom: 20px solid #f4ebdb;
+}
+
+.header-container .club-name{
+    width: 17rem;
+    background-color: #f4ebdb;
+    color: black;
+    font-family:'Playfair Display', serif;
+    margin-top: 1rem;
+    
+    font-size: 3rem;}
+.header-container .club-line-2
+    {
+    background-color: #537072;
+    position: absolute;
+    margin-top: 1rem;
+    color: white;
+    font-family:'Playfair Display', serif;
+    font-size: 2.5rem;
+    }
+.header-container .club-line-3
+    {
+    margin-top: 6rem;
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    }
+   
+    /* ================================HEADER CSS ENDS==================================================== */
+/* ================================ABOUR US=========================================================== */
+.line{
+    height: 3.125rem;
+    width: 10rem;
+}
+.about-container{
+    font-family: 'Playfair Display',serif;
+    background-color: #f4ebdb;
+
+    text-align: center;
+    padding : 2rem 10rem;
+}
+/* ==================================================================================================== */
+
+ .container1 {
+    font-family: 'Playfair Display',serif;
+    text-align: center;
+    width: 100%;
+    background-color: #f4ebdb;
+    /* background-color: #537072ad; */
+    /* background: transparent!important; */
+    padding-top: 3rem;
+}
+.container1 .row{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* translate: (50%,50%); */
+}
+.container1 .mnv-col .h3{
+    text-align: center;
+}
+.mnv{
+    padding: 1rem 4rem 1rem 4rem;
+}
+.mnv-head h1:after
+{
+    margin-left: 37.5rem;
+    content:' ';
+    width: 20%;
+    display:block;
+    border-radius: 50%;
+    border-bottom:2px solid black;
+}
+
+/* ================================MISSION AND VISION ENDS================================================= */
+
+
+.parallax1{ 
+    background: linear-gradient(to right,#537072ad, rgba(255, 255, 255, 0)), url("img-1.png");
+    min-width: 70%;
+    position: relative;
+    opacity: 9;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2{ 
+    background: linear-gradient(to right,#537072ad, rgba(255, 255, 255, 0)), url("im4.png");
+    min-width: 70%;
+    position: relative;
+    opacity: 9;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ================================parallax================================================================ */
+/* 
+
+
+
+/* ================================CONTAINER ENDS===================================================== */
+.counter-container{
+    margin-top: 3%;
+    height: 18rem;
+    color: black;}
+    
+.counter-container .icon-box{
+    /* border: 1px solid black; */
+    height: 90px;
+    width: 130px;
+    margin-bottom: 2rem;
+    margin-left: 34%;
+    /* transform: rotate(45deg); */
+text-align: center;}
+.counter-container .icon-box .fas ,.counter-box .far{
+    padding-top: 24%;
+    padding-right: 19%;
+    font-size: 60px;
+    float: left;
+    color: #2c4a52 ;}
+.counter-box p{
+    font-size: 20px;}
+.counter-box .counter p{
+    font-size: 40px;}
+.counter-container .row{
+    height: 250px;}
+
+/*================================COUNTER CONTAINER ENDS ============================================= */
+/*start of  container above the flex box */
+.w3-container:after,
+.w3-container:before,
+.w3-panel:after,
+.w3-panel:before,
+.w3-row:after,
+.w3-row:before,
+.w3-row-padding:after,
+.w3-row-padding:before,
+.w3-cell-row:before,
+.w3-cell-row:after,
+.w3-clear:after,
+.w3-clear:before,
+.w3-bar:before,
+.w3-bar:after
+{content:"";display:table;clear:both}
+
+
+
+
+.w3-teal
+{color:#fff!important;background-color:#009688!important}
+/* end of container abive flex box */
+
+
+/* ===================================TEAM ======================================] */
+
+.team{
+    margin:40px;
+    margin-top: 3rem;
+    margin-bottom: 30px;
+  }
+  .team-member {
+    margin: 20px 0;
+    padding: 0;
+  }
+  .team-member figure {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .team-member figure img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .team-member figcaption p {
+    font-size: 16px;
+  }
+  
+  .team-member figcaption ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .team-member figcaption ul {
+    visibility: visible;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .team-member figcaption ul li {
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .team-member h4 {
+    margin: 10px 0 0;
+    padding: 0;
+  }
+  
+  .team-member figcaption {
+    padding: 50px;
+    color: transparent;
+    background-color: transparent;
+    position: absolute;
+    z-index: 996;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .team-member figure:hover figcaption {
+    visibility: visible;
+    color: #fff;
+    background: #537072;
+    opacity: .9;
+    /* Primary color, can be changed via colors.css */
+    height: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .team-member figure:hover figcaption ul li a{
+      color: #fff!important;
+      
+  }
+  .team-member figure figcaption ul li a{
+    color: #fff!important;
+    
+}
+  .team-member figure:hover figcaption ul li a:hover {
+    color: rgba(49, 49, 49, .97)!important;
+  }
+
+  
+  .team-member figure img {
+    -webkit-transform: scale(1) rotate(0) translateY(0);
+    -moz-transform: scale(1) rotate(0) translateY(0);
+    -o-transform: scale(1) rotate(0) translateY(0);
+    -ms-transform: scale(1) rotate(0) translateY(0);
+    transform: scale(1) rotate(0) translateY(0);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .team-member figure:hover img {
+    -webkit-transform: scale(1.1) rotate(1deg) translateY(12px);
+    -moz-transform: scale(1.1) rotate(1deg) translateY(12px);
+    -o-transform: scale(1.1) rotate(1deg) translateY(12px);
+    -ms-transform: scale(1.1) rotate(1deg) translateY(12px);
+    transform: scale(1.1) rotate(1deg) translateY(12px);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .col-md-3{
+    display: grid;
+    grid-gap:10px;
+  }
+  
+
+/* ==================================FLIPBOX TEAM ENDS======================================================== */
+
+
+.footer #newme{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;}
+.footer .link_text{
+    width:100%;
+    height:100px;
+    background-color:rgb(253, 252, 252);
+    text-decoration: none;
+    box-shadow: 0 0 15px gray;}
+.footer .link_text:hover{
+    box-shadow: 1px 1px 25px black;}
+.footer .link_text a{
+    position: relative;
+    top:30px;
+    color:rgb(14, 13, 13);
+    font-size:20px;
+    margin-left:25px;}
+.footer .link_text a:hover{
+    text-decoration: none;
+    color:lightsteelblue;}
+.footer .link_text .fab{
+    font-size: 25px;}
+    .footer .link_text .fab:hover{
+        color: red;
+    }
+.footer .link_text .fa-facebook:hover{
+        color: #3b5998;
+    }
+.footer .center_text{
+    float:center;}
+/* ==================================FOOTER ENDS======================================================== */
+@media only screen and (max-device-width: 1024px) {
+    .img-1, .img-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+}
+.row{
+    margin-right: 0px!important;
+}
+

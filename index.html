@@ -1,0 +1,595 @@
+<?php include('server.php') ?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <!--  -->
+    <link rel='shortcut icon' href='logp.png' type='image/x-icon' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e0b8fdf55f.js"></script>
+    <script src="waypints.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <title>Aryabhatta Club</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+        <a href=""><img src="logp.png" alt="###" height="50px" width="50px"></a>
+        <div class="brand-logo">Aryabhatta Club</div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active" style="color:blanchedalmond">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Societies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+        <a id="regi"><button onclick="scrollWin()">Our Team</button></a>
+        <a href="#" id="regi"><button data-toggle="modal" data-target="#exampleModalCenter" data-toggle="modal" data-target="#exampleModalCenter">Register</button></a>
+
+        <!-- ===================================MODAL FORM================================================== -->
+        <div class="modal fade" id="exampleModalCenter" style="color: black;" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <form class="col s12" id="reg-form" action="server.php" method="post">
+                                <div class="col-12 ">
+                                    <input id="firstname" name="firstname" type="text" class="form-control "
+                                        placeholder="First name" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-12">
+                                    <input id="lastname" name="lastname" type="text" class="form-control "
+                                        placeholder="Last name" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div><br>
+                                <div class="col-12">
+                                    <input id="email" name="email" type="email" class="form-control "
+                                        placeholder="E-mail" required>
+                                    <div class="invalid-feedback">
+                                        Enter a valid email
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks Good!
+                                    </div>
+                                </div><br>
+                                <div class="col-12">
+                                    <input id="contact" name="contact" type="contact" class="form-control "
+                                        placeholder="+91-" value="+91-" required>
+                                    <div class="invalid-feedback">
+                                        Enter a valid email
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks Good!
+                                    </div>
+                                </div><br>
+                                <div class="col-12">
+                                    <input id="profession" name="profession" type="text" class="form-control "
+                                        placeholder="Profession" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="institute">Organization</label>
+                                    <input id="institute" name="institute" type="text" class="form-control "
+                                        placeholder="University/College/Company/School" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <p>&nbsp;&nbsp;&nbsp;Students should enter the details below</p>
+                                <div class="row  container">
+                                    <div class="col-6">
+                                        <input id="year" name="year" type="text" class="form-control "
+                                            placeholder="Year">
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <input id="branch" name="branch" type="text" class="form-control "
+                                            placeholder="Branch">
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row container">
+                                    <div class="col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input is-invalid" type="checkbox" value=""
+                                                required>
+                                            <label class="form-check-label" for="invalidCheck3">
+                                                Agree to <a href="#" data-toggle="modal"
+                                                    data-target="#exampleModalLong">Terms and Policies</a>
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                You must agree before submitting.
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="col-6"><br>
+                                        <button class="btn btn-primary" type="submit">Submit form</button>
+                                    </div>
+                                  <!--  <div class="col-6">
+                                        <div class="form-check">
+                                            <input id="letter" name="letter" class="form-check-input " type="checkbox"
+                                                value="1" id="invalidCheck3">
+                                            Subscribe to our newsletter for recent updates
+
+                                            <div class="valid-feedback">
+                                                Thanks For Subscribing
+                                            </div>
+                                        </div> 
+                                    </div> -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===================================MODAL FORM ENDS================================================== -->
+    </nav>
+    <!-- Navbar ends -->
+    <div class="header-container">
+        <div class="header">
+            <!-- <img class="header-logo" src="logp.png"> -->
+            <div class="content-above"></div>
+            <div class="club-name">
+                &nbsp;Aryabhatta
+            </div>
+            <div class="club-line-2">
+                    &nbsp;The Science And Innovation Club&nbsp;
+            </div>
+            <div class="club-line-3">
+                ( Affilated to VIPNET & DST, Govt. of India )
+            </div>
+            <!-- <div style="border-top: 7px solid #f4ebdb;position: relative; margin-top: 8.5rem;width: 3rem;"></div> -->
+            <br>
+            <!-- <div class="up-events">
+
+                Upcoming events :-
+            </div>
+            <div class="event-list">
+                <a href="#"> EVENT</a>
+                <li>Hack CS 1.0</li>
+            </div> -->
+        </div>
+    </div>
+    </div>
+    <!-- ============================HEADER ENDS========================================================= -->
+    <!-- ============================ABOUT US============================================================ -->
+
+    <div class="about-container">
+        <div>
+            <h2><img class="line" src="line-lt.png">&nbsp;Who are we?&nbsp;<img class="line" src="line-rt.png"></h2>
+        </div>
+        <div class="about">The Science Club is the place for students who are interested in science to learn about
+            all scopes of science from physics, chemistry, maths & different disciplines of engineering to the
+            environment. We discuss how to use this conceptual basis for applications in the real world. Trips will
+            be taken to museums, observatories, research institutes and so on.Our club aims to inculcate the spirit
+            of science into students in daily life. We wish to nurture the habit of implementing book knowledge
+            into practicality. We will focus on long term, academically-focused relationships between youth club
+            members and practicing scientists. Our club will also work to serve to society especially problems
+            related to various industries (like Water recycling in plants) and Common man for senior citizen.
+            We want more students to get registered in IEEE , VIPNET and WIE. We are now planning to open
+            Computer Society now. The aims of this club will be fulfilled by organizing various activities
+            such as:-
+            1. Gurukul Shiksha Sopan
+            2. Fun with Science and Technical activities
+            3. Expert's lecture from professors of IIT's. NIT's and Universities
+            4. Project Exhibition
+            5.Students's National Journal
+            6. Blog, Article, Chapter and Book writing
+            7. Summer camps
+            8. Project submission
+            9. International and National level Quiz Competitions</div>
+    </div>
+    <!-- ============================ABOUT US ENDS============================================================ -->
+    <div class="parallax1 img-1">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- =================================MISSION VISION=========================================================== -->
+    </div>
+    <div class="container1 mnv-head ">
+
+        <div class="text-center">
+            <h2><img class="line" src="line-lt.png">&nbsp;What we stand for?&nbsp;<img class="line" src="line-rt.png">
+            </h2>
+        </div>
+        <div class="row  justify-content-md-center mnv">
+
+            <div class="col-md-6 mnv-col">
+                <h3>Our Vision</h3>
+                <p>
+                    To be the flagship into implementing Science to problems around us and set new standards into
+                    innovations.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h3>Our Mission</h3>
+                <p>
+                    To include and involve students to excel into innovation and be the solution providers of tomorrow
+                    by doing exemplary works into research and innovations.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--=============================MISSION VISSION ENDS======================================================= -->
+    <div class="parallax2 img-2">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+
+           <!-- ============================TICKER=============================================================== -->
+<style>
+    .col-md-4{
+        width: 32%;
+        margin-top: 1rem;
+    }
+    .fa-users:before {
+        margin-left: 46px;
+    }
+    .fa-calendar-check:before {
+        margin-left: 56px;
+    }
+    .fa-handshake:before {
+        margin-left: 48px;
+    }
+
+    </style>
+    
+        <div class="counter-container  text-center">
+<h1 class="text-1"><img class="line" src="line-lt.png">&nbsp;Our Reach&nbsp;<img class="line" src="line-rt.png"></h1>
+            <div class="row ">
+                <div class="col-md-4 counter-box">
+                    <div class="icon-box"> <i class="fas fa-users" aria-hidden="true"></i></div>
+                    <div>
+                      <strong>  <p class="counter">965</p></strong>
+                    </div>
+                  <strong>  <p>Users</p></strong>
+                </div>
+                <div class="col-md-4 counter-box">
+                    <div class="icon-box"><i class="far fa-calendar-check"></i></i></div>
+                    <div>
+                     <strong>   <p class="counter">67</p></strong>
+                    </div>
+                 <strong>   <p>Events</p></strong>
+                </div>
+                <div class="col-md-4 counter-box">
+                    <div class="icon-box"> <i class="fas fa-handshake"></i></i></div>
+                    <div>
+                    <strong>    <p class="counter">6</p></strong>
+                    </div>
+                  <strong>  <p>Partners</p></strong>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- ======================================TECKER ENDS============================================ -->
+    <!-- ===========================TESTIMONIALS STARTS===================================================== -->
+<style>
+    h1{
+        font-family: 'Playfair Display',serif;
+    }
+</style>
+    <section id="Team" class="team content-section">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-12">
+              <h1><img class="line" src="line-lt.png">&nbsp;Our Mentors&nbsp;<img class="line" src="line-rt.png"></h1>
+              <h3 class="caption gray"></h3>
+            </div>
+      
+            <div class="container">
+              <div class="row">
+                <div class = "col-12 col-md-3">
+                  <div class="team-member">
+                    <figure>
+                      <img src="Aparna_Dixit1.jpg" alt="" class="img-responsive">
+                      <figcaption>
+                        <p>Director</p>
+                        <br><br><br>
+                        <ul>
+                          <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                          <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                      </figcaption>
+                    </figure>
+                    <h4>Dr.Aparna Dixit</h4>
+                    <!-- <p>post</p> -->
+                  </div><!-- /.team-member-->
+                </div>
+                <div class = "col-12 col-md-3">
+                  <div class="team-member">
+                    <figure>
+                      <img src="Kartika Pradeep.jpeg" alt="" class="img-responsive">
+                      <figcaption>
+                        <p></p>
+                        <br><br><br>
+                        <ul>
+                          <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                          <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                      </figcaption>
+                    </figure>
+                    <h4>Dr.Kartika Pradeep</h4>
+                    <!-- <p>post</p> -->
+                  </div><!-- /.team-member-->
+                </div>
+                  <div class = "col-12 col-md-3">
+                  <div class="team-member">
+                    <figure>
+                      <img src="Mohan_Mudradi.jpg" alt="" class="img-responsive">
+                      <figcaption>
+                        <p></p>
+                        <br><br><br>
+                        <ul>
+                          <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                          <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                      </figcaption>
+                    </figure>
+                    <h4>Mr.Mohan Rao </h4>
+                    <!-- <p>post</p> -->
+                  </div><!-- /.team-member-->
+            </div>
+            <div class = "col-12 col-md-3">
+                    <div class="team-member">
+                      <figure>
+                        <img src="Savan_Sir.jpg" alt="" class="img-responsive">
+                        <figcaption>
+                          <p></p>
+                          <br><br><br>
+                          <ul>
+                            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                          </ul>
+                        </figcaption>
+                      </figure>
+                      <h4>Mr.Savan </h4>
+                      <!-- <p>post</p> -->
+                    </div><!-- /.team-member-->
+                  </div>
+              </div><!-- /.row -->
+            </div><!-- /.container -->
+      
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section><!-- /.our-team -->
+
+    <!-- ===========================TESTIMONIALS ENDS===================================================== -->
+ 
+    <!-- ===========================FLEX BOX TEAM STARTS============================================================================== -->
+
+     <section id="team" class="team content-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <h1><img class="line" src="line-lt.png">&nbsp;Our Team&nbsp;<img class="line" src="line-rt.png"></h1>
+            
+          </div>
+    
+          <div class="container">
+            <div class="row">
+              <div class = "col-12 col-md-3">
+                <div class="team-member">
+                  <figure>
+                    <img src="24311-min.jpeg" alt="" class="img-responsive">
+                    <figcaption>
+                      <p>Loathe Narcissism
+                           Love Vanity</p>
+                      <ul>
+                        <li><a href="https://www.facebook.com/shreays.mishra"><i class="fab fa-facebook fa-lg" ></i></a></li>
+                        <li><a href="https://www.instagram.com/shreyas_mishra_/"><i class="fab fa-instagram fa-lg"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin fa-lg"></i></a></li>
+                      </ul>
+                    </figcaption>
+                  </figure>
+                  <h4>Shreyas Mishra</h4>
+                  <!-- <p>post</p> -->
+                </div><!-- /.team-member-->
+              </div>
+              
+              <div class = "col-12 col-md-3">
+                  <div class="team-member">
+                    <figure>
+                      <img src="24511-min.jpeg" alt="" class="img-responsive">
+                      <figcaption>
+                        <p>The more Knowledge you have the more you realise  how much u don't know.</p>
+                        <ul>
+                          <li><a href="https://www.facebook.com/profile.php?id=100008135256459"><i class="fab fa-facebook fa-lg"></i></a></li>
+                          <li><a href="https://www.instagram.com/suryansh___tripathi/"><i class="fab fa-instagram fa-lg"></i></a></li>
+                          <li><a href="www.linkedin.com/in/suryansh-tripathi-100448105"><i class="fab fa-linkedin fa-lg fa-lg"></i></a></li>
+                        </ul>
+                      </figcaption>
+                    </figure>
+                    <h4>Suryansh Tripathi</h4>
+                    <!-- <p>post</p> -->
+                  </div><!-- /.team-member-->
+                </div>
+                <div class = "col-12 col-md-3">
+                  <div class="team-member">
+                    <figure>
+                      <img src="24335-min.jpeg" alt="" class="img-responsive">
+                      <figcaption>
+                        <p></p><br>
+                        <ul>
+                          <li><a href="https://www.facebook.com/profile.php?id=100010274465401"><i class="fab fa-facebook fa-lg"></i></a></li>
+                          <li><a href="https://www.instagram.com/sumitt_yadavv/"><i class="fab fa-instagram fa-lg"></i></a></li>
+                          <li><a href=""><i class="fab fa-linkedin fa-lg"></i></a></li>
+                        </ul>
+                      </figcaption>
+                    </figure>
+                    <h4>Sumit Yadav</h4>
+                    <!-- <p>post</p> -->
+                  </div><!-- /.team-member-->
+                </div>
+                <div class = "col-12 col-md-3">
+                  <div class="team-member">
+                    <figure>
+                      <img src="23316.jpeg" alt="" class="img-responsive">
+                      <figcaption>
+                        <p>The successful warrior is the average man, with laser-like focus.</p>
+                        
+                        <ul>
+                          <li><a href="https://www.facebook.com/vaibhav.mantri82"><i class="fab fa-facebook fa-lg"></i></a></li>
+                          <li><a href="https://www.instagram.com/snaresandsticks/"><i class="fab fa-instagram fa-lg"></i></a></li>
+                          <li><a href="https://www.linkedin.com/in/vaibhav-mantri-350331188"><i class="fab fa-linkedin fa-lg"></i></a></li>
+                        </ul>
+                      </figcaption>
+                    </figure>
+                    <h4>Vaibhav Mantri</h4>
+                    <!-- <p>post</p> -->
+                  </div><!-- /.team-member-->
+                </div>
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+    
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.our-team -->
+    <!-- ========================================================================================================= -->
+
+    <!-- ======================================FOOTER STARTS======================================================== -->
+    <div id="newme" class="footer">
+        <div class="link_text">
+            <a href="#">Home</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModalLong">Terms and Policies</a>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Terms and Policies</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                             1.Please be nice with other members of the club. <br>
+                            2.Any type of wrong doing will lead to expulsion from club.
+                            <br>
+                            3.Candidate must be diligent enough to perform each task in
+                            &nbsp;&nbsp;time.<br>
+                            4.Candidate should aspire to contribute his/her part in the field of
+                            &nbsp;&nbsp;science and
+                            technology.<br>
+                            5.Science and technology does not automatically capture any &nbsp;&nbsp;specific
+                            personal
+                            information from you(like name, contact &nbsp;&nbsp;number, e-mail etc)that
+                            allow us to
+                            identify you individually.
+                            6.We do not share or sell any personal information to any &nbsp;&nbsp;unknown
+                            source. <br>
+                            7.We do not permit our page to be loaded into frames or any &nbsp;&nbsp;other
+                            site. <br>
+                            8.Sharing of resources or content from the website is a &nbsp;&nbsp;punishable
+                            offense.<br>
+                            6.Sharing of information should depend on the following factors :<br>
+                            &nbsp;&nbsp;.authentic <br>
+                            &nbsp;&nbsp;.verified <br>
+                            &nbsp;&nbsp;.acknowledged from renowned resources<br>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a style="color: rgb(10, 10, 10);">Contact Us</a>
+            <a style="margin-left:250px;color: rgb(19, 18, 18);">&copy;&nbsp;Copyright 2019 Aryabhatta
+                Club</i></a>
+            <a href="#" style="float:right;margin-right: 70px;color:  grey"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="float:right;margin-right: 20px;color: grey"><i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" style="float:right;margin-right: 20px;color: grey"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="center_text">
+
+        </div>
+
+        <script>
+
+            function scrollWin() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#team").offset().top
+                }, 2000);
+            }
+
+            $('.carousel').carousel()
+
+            // Open the Modal
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            // Close the Modal
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            $('.counter').counterUp({
+                delay: 10,
+                time: 6000
+            });
+
+        </script>
+
+</body>

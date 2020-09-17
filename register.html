@@ -1,0 +1,236 @@
+<?php include('server.php') ?>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- MATERIALIZE STARTS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- MATERIALIZE ENDS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/e0b8fdf55f.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="registration.css">
+    <!-- <script src="member.js"></script> -->
+    <title>Membership</title>
+</head>
+
+<body>
+
+    <!-- \\\\\\\\\\\\\\\\\\\\ICON BAR CODE STARTS////////////// -->
+    <div class=" icon-bar">
+        <a href="#" class="social fa" style="color: white">Register</a>
+        <a href="#" class="fab fa-linkedin-in social" style="color: white"> </a>
+        <a href="#" class="fab fa-google-plus-g social" style="color: white"> </a>
+        <a href="#" class="fab fa-instagram social" style="color: white"> </a>
+        <a href="#" class="fab fa-facebook-f social " style="color: white"></a>
+        <a href="https://aryabhattaclub.com" class="fa fa-home social" style="color: white"> </a>
+      
+    </div>
+    <!-- \\\\\\\\\\\\\\\\\\\\ICON BAR CODE ENDS////////////// -->
+
+
+    <!-- \\\\\\\\\\\\\\\\\\\\NAV BAR CODE ENDS////////////// -->
+    <div id="particles-js">
+        <img src="logp.png" class="mem-logo">
+        <div class="welcome-line">We are honoured to have you on our team.<br>Welcome aboard!</div>
+        <canvas class="particles-js-canvas-el" style="width: 100%; height: 83%;"></canvas>
+
+    </div>
+
+    <script src="particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', './particlesjs-config1.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+    <!-- \\\\\\\\\\\\\\\\\\\\NAV BAR CODE STARTS////////////// -->
+
+    <!--\\\\\\\\\\\\\\\\\\\\ MAIN REGISTRATION PAGE CODE START////////////// -->
+    <div class="big-container1">
+        <div class="bg-image"></div>
+        <div class="container1">
+            <div class="row">
+                <form class="col s12" id="reg-form" action="register.php" method="post">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="firstname" name="firstname" type="text" class="validate" required>
+                            <label for="firstname">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="lastname" name="lastname" type="text" class="validate" required>
+                            <label for="lastname">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" name="email" type="email" class="validate" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="password" name="password" type="password" class="validate" minlength="8" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="passwordConfirm" type="password" class="validate" required>
+                            <label id="lblPasswordConfirm" for="passwordConfirm" data-error="Password not match"
+                                data-success="Password Match">Confirm Password </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="text" name="bdate" id="bdate" class="datepicker" required>
+                            <label for="bdate">Date of Birth</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <div class="row">
+                                <div class="gender-female col s4">
+                                    <label>
+                                        <input class="with-gap" name="gender" type="radio" value="1" required>
+                                        <span>Male</span>
+                                    </label>
+                                </div>
+                                <div class="gender-male col s4 ">
+                                    <label>
+                                        <input class="with-gap" name="gender" type="radio" value="2" required>
+                                        <span>Female</span>
+                                    </label>
+                                </div>
+
+                                <div class="gender-other col s4 ">
+                                    <label>
+                                        <input class="with-gap" name="gender" type="radio" value="3" required>
+                                        <span>Other</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row center">
+                            <div class="input-field col s12 ">
+                                <button class=" register  btn-large btn-register waves-effect waves-light" type="submit"
+                                    name="action">Register
+                                    <i class="material-icons right">done</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--\\\\\\\\\\\\\\\\\\\\ MAIN REGISTRATION PAGE CODE ENDS////////////// -->
+    <footer class="page-footer black " style="min-width: 645px;">
+        <div class=" row center  " style="min-width: 645px;" id="frow">
+            <div class="col l3 m3">
+                <h5>About CLub</h5>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col l3 m3">
+                <h5>Memberships</h5>
+                <ul>
+                    <li><a href="#"> Join</a></li>
+                    <li><a href="#"> Renew</a></li>
+                    <li><a href="#"> Benifits</a></li>
+                    <li><a href="#"> IEEE Collaboration</a></li>
+                </ul>
+            </div>
+            <div class="col l3 m3">
+
+                <h5>Grow With Us</h5>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">get involved</a></li>
+                </ul>
+            </div>
+            <div class="col l3 m3">
+
+                    <h5>Have questions?</h5>
+                    <ul>
+                        <li><a href="#">+91-9876543210</a></li>
+                        <li><a href="#">shreyas77mishra@gmail.com</a></li>
+                        
+                    </ul>
+                </div>
+        </div>
+        <div style="color: white;text-align: center; ">
+            <p>We'll your encourage ideas and shape your future </p>
+        </div>
+        <div style="color: white;text-align: center; ">
+            <a href="www.facebook.com" class="social-icon"><i class="fab fa-facebook">&nbsp;</i></a>
+            <a href="www.instagram.com" class="social-icon"><i class="fab fa-instagram">&nbsp;</i></a>
+            <a href="www.twitter.com" class="social-icon"><i class="fab fa-twitter">&nbsp;</i></a>
+        </div>
+        <br>
+        <div class="footer-copyright grey">
+            <div class="container">
+                � 2018 Copyright - All Rights Reserved
+                <a class="grey-text text-lighten-4 right" href="#!">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+	yearRange: [1950,2005],});
+        });
+
+
+        $("#password").on("focusout", function (e) {
+            if ($(this).val() != $("#passwordConfirm").val()) {
+                $("#passwordConfirm").removeClass("valid").addClass("invalid");
+            } else {
+                $("#passwordConfirm").removeClass("invalid").addClass("valid");
+            }
+        });
+
+        $("#passwordConfirm").on("keyup", function (e) {
+            if ($("#password").val() != $(this).val()) {
+                $(this).removeClass("valid").addClass("invalid");
+            } else {
+                $(this).removeClass("invalid").addClass("valid");
+            }
+        });
+        $(document).ready(function () {
+            $('.carousel').carousel(
+                {
+                    dist: 0,
+                    padding: 0,
+                    fullWidth: true,
+                    indicators: true,
+                    duration: 100,
+                }
+
+            );
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+html{
+  height: 100%!important;
+}
+body {margin:0;
+  height: 100%!important;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+ h3{
+    font-family: Calibri; 
+    font-size: 25pt;         
+    font-style: normal; 
+    font-weight: bold; 
+    color:SlateBlue;
+    text-align: center; 
+    text-decoration: underline
+  }
+ /* <!-- \\\\\\\\\\\\\\\\\\\\ICON BAR CODE STARTS////////////// --> */
+ .icon-bar {
+   position: relative;
+  width: 100%;
+   background-color: rgb(49, 49, 49);
+  
+   padding-inline-end: 3rem;
+   z-index: 3;
+   height: 36px;
+   text-align: center;
+   font-size: 16px; 
+   min-width: 645px;
+  }
+ .icon-bar a {
+   text-align: center;
+   padding: 10px 10px 10px 10px ;
+ }
+ .social{
+   float: right;
+   padding: 10px 10px 10px 10px ;
+   background: none;
+   border: none;
+   outline: none;
+   color: white;
+ }
+ .social:focus{
+   border: none!important;
+   outline: none!important;
+   background-color: #000;
+ }
+ .icon-bar a:hover ,.social:hover {
+   background-color: #000;
+   text-decoration: none;
+ }
+ .icontact{
+
+   padding: 10px 10px 10px 10px ;
+   float: left;
+ }
+ /* <!-- \\\\\\\\\\\\\\\\\\\\ICON BAR CODE ENDS////////////// --> */
+
+
+/* <!-- \\\\\\\\\\\\\\\\\\\\NAV BAR CODE STARTS////////////// --> */
+.navimage{
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+ #particles-js {
+   position: relative;
+   width: 100%;
+   height: 20rem;
+   background: black;
+   min-width: 645px;
+ }
+ .particles-js-canvas-el{
+   /* margin-top: 3.5rem; */
+   height: 20rem;
+   min-width: 645px;
+   z-index: -99;
+ }
+ .mem-logo{
+  /* transform-origin: 70%; */
+   position: absolute; 
+  transform: translate(-70%,-30%);
+  width: 15rem;
+  top: 35%;
+  left:15%;
+margin-left: 2rem;
+  z-index: 3;
+}
+/* <!-- \\\\\\\\\\\\\\\\\\\\NAV BAR CODE ENDS////////////// --> */
+.big-container1{
+  margin-top: -0.46rem;
+  padding: 80px 5px;
+  min-width: 645px;
+  /* background-color: antiquewhite; */
+}
+.bg-image{
+  position: relative;
+  /* background-image: url(/Shreyas/Images/DSC_4751.JPG); */
+  filter:grayscale(40%);
+  -webkit-filter:grayscale(40%);
+  filter:blur(7px);
+  -webkit-filter:blur(7px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   min-width: 645px;
+   /* height: 60rem!important; */
+}
+.welcome-line-container{
+  text-align: center;
+  height: 100%;
+}
+.welcome-line{
+  
+  animation: showUp 3s cubic-bezier(0.18, 1.3, 1, 1) forwards;
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: 28vw;
+
+  color: #f3f9fb;
+  font-size: 3rem;
+  text-align: center;
+}
+.container1 {
+  /* top: -55rem; */
+  background: whitesmoke;
+  border: .4px solid black;
+  box-shadow: 5px 5px lightslategray ;
+  width: 45%!important;
+  box-sizing: border-box;
+  position: relative;
+  min-width: 645px;
+  margin: auto;
+  border-radius:5px;
+  padding: 15px;
+  
+}
+
+.col.s6 > .btn {
+   width: 14rem;
+}
+.gender-male,.gender-female {
+  display: inline-block;
+}
+.gender-female {
+  margin-left: 35px;
+}
+radio:required {
+  border-color: red;
+}
+.container1 {
+  animation: showUp 3s cubic-bezier(0.18, 1.3, 1, 1) forwards;
+}
+.register{
+  background-color: #26a69a!important;
+  line-height: 1rem!important;
+  text-size-adjust: 26px;
+  font-size: 1.25rem!important;
+  align-self: auto;
+}
+.register:hover{
+  box-shadow: #000!important;
+  background-color: #226597!important;
+}
+@keyframes showUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.ngl {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+/* <!-- \\\\\\\\\\\\\\\\\\\\footer BAR CODE ENDS////////////// --> */
+  
+h4{
+  color: #f3f9fb;
+}
+ 
+   .carousel{
+      /* border: 3px solid #226597; */
+      /* background-color: aqua; */
+      height: 100%;
+   min-width: 645px;
+   width: 100%;
+   /* vertical-align: 100%; */
+   overflow: unset;
+   /* text-overflow: ellipsis; */
+    }
+@media only screen and (min-width: 601px){
+.datepicker-modal {
+  /* max-width: 625px; */
+  min-width: 550px;
+}
+}
